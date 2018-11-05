@@ -1,0 +1,12 @@
+version: '3'
+services:
+
+  jenkins-node:
+    image: jenkinsci/blueocean
+    environment:
+    - DISABLE_SECURITY=true  # ignore LDAP
+    ports:
+    - "8080:8080"
+    volumes:
+    - "./jenkins_home:/var/jenkins_home"
+    user: 0:0
