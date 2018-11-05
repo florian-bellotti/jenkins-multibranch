@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Hello env') {
             steps {
-                sh 'echo ${env.BRANCH_NAME}'
+               echo "My branch is: ${env.BRANCH_NAME}"
             }
         }
     }
