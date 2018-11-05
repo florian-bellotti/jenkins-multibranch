@@ -6,5 +6,10 @@ pipeline {
                 sh 'echo "Hello world!"'
             }
         }
+        stage('Hello env') {
+            steps {
+                sh 'echo "Hello ${env.BRANCH_NAME}!"'
+            }
+        }
     }
 }
